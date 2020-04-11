@@ -13,6 +13,10 @@ const io = socketio(server);
 io.on("connect", (socket) => {
   console.log("A new user has connected.");
 
+  socket.on("join", ({ name, room }) => {
+    console.log(name, room);
+  });
+
   socket.on("disconnect", () => {
     console.log("User disconnected");
   });
