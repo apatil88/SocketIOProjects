@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import queryString from "query-string";
 import io from "socket.io-client";
 
+// CSS
+import "./Chat.css";
+
 let socket;
 
 const Chat = ({ location }) => {
@@ -21,6 +24,12 @@ const Chat = ({ location }) => {
 
     // Emit data
     socket.emit("join", { name, room });
+
+    return () => {
+      socket.emit("disconnect");
+
+      socket.off();
+    };
   }, [ENDPOINT, location.search]); //rerender only if data or ENDPOINT changes
   return <h1>Chat</h1>;
 };
