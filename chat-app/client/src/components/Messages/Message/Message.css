@@ -13,6 +13,8 @@
   float: left;
   font-size: 1.1em;
   word-wrap: break-word;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .messageText img {
@@ -29,7 +31,7 @@
 .sentText {
   display: flex;
   align-items: center;
-  font-family: Helvetica;
+  font-family: Roboto;
   color: #828282;
   letter-spacing: 0.3px;
 }
@@ -59,7 +61,7 @@
 }
 
 .backgroundBlue {
-  background: #2979ff;
+  background: #751474;
 }
 
 .backgroundLight {
