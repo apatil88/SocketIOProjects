@@ -20,7 +20,7 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = "localhost:5000";
+  const ENDPOINT = "https://chatteron-sockerio.herokuapp.com/";
 
   useEffect(() => {
     // Parse data from URL and put it an object
